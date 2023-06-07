@@ -9,6 +9,7 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     color: white;
+    overflow-y: hidden;
 }
 
 html {
@@ -125,11 +126,17 @@ nav {
 /* MOVIES   70vh*/
 
 .movies {
-    height: 70vh;
+    max-height: 70vh;
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+}
+
+.movie {
+    width: 30%;
+    margin: 24px 0;
 }
 
 .movie__img {
@@ -215,7 +222,6 @@ nav {
     justify-content: space-around;
     border-radius: 12px;
     background-color: rgb(0,0,0, 0.7);
-
 }
 
 .movie__rating--title {
