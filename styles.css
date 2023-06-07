@@ -9,7 +9,6 @@
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     color: white;
-    overflow-y: hidden;
 }
 
 html {
@@ -45,6 +44,7 @@ a.btn {
     color: #242424;
     padding: 8px 20px;
     border-radius: 12px;
+    overflow-y: visible;
     border: none;
 }
 
@@ -137,6 +137,7 @@ nav {
 .movie {
     width: 30%;
     margin: 24px 0;
+    overflow-y: hidden;
 }
 
 .movie__img {
