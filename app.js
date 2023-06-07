@@ -9,6 +9,7 @@ async function onSearchChange(event){
     movieName = event.target.value
     const movies = await fetch(`https://www.omdbapi.com/?s=${movieName}&page=1&apikey=cfc93c83`);
     const moviesData = await movies.json();
+    console.log(moviesData);
     if(moviesData.Response == "True"){
         clearBox();
     }
@@ -22,9 +23,6 @@ async function onSearchChange(event){
 }
 
 function movieHTML(movieData) {
-    // if(movieData.Poster == "N/A") { "https://static.displate.com/857x1200/displate/2022-04-15/7422bfe15b3ea7b5933dffd896e9c7f9_46003a1b7353dc7b5a02949bd074432a.jpg"
-        
-    // }
     movieListEl.innerHTML += `<li class="movie">
         <div class="movie__wrapper">
             <img src="${movieData.Poster=="N/A"? "https://static.displate.com/857x1200/displate/2022-04-15/7422bfe15b3ea7b5933dffd896e9c7f9_46003a1b7353dc7b5a02949bd074432a.jpg" : movieData.Poster}" alt="" class="movie__img"> 
