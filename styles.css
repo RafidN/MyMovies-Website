@@ -126,6 +126,7 @@ nav {
 /* MOVIES   70vh*/
 
 .movies {
+    margin-top: 32px;
     max-height: 70vh;
     width: 100%;
     display: flex;
@@ -136,9 +137,11 @@ nav {
 
 .movie {
     width: 30%;
+    height: 100%;
     margin: 24px 0;
     overflow-y: hidden;
 }
+
 
 .movie__img {
     position: relative;
@@ -184,6 +187,7 @@ nav {
 
 .movie__title {
     display: flex;
+    text-align: center;
     justify-content: center;
     top: 0;
     width: 100%;
