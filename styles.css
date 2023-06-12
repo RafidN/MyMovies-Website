@@ -99,7 +99,7 @@ nav {
 .search__header {
     display: flex;
     justify-content: center;
-    font-size: 32px;
+    font-size: 48px;
 }
 
 .search__container {
@@ -109,10 +109,12 @@ nav {
 .search__input {
     display: flex;
     margin: 24px auto;
+    width: 28vw;
     padding: 12px 200px 12px 12px;
     border-radius: 16px;
     overflow: hidden;
     border: none;
+    font-size: 18px;
     color: #242424;
 }
 .search__img {
@@ -139,24 +141,24 @@ nav {
     width: 30%;
     height: 100%;
     margin: 24px 0;
+    overflow-x: hidden;
     overflow-y: hidden;
+    box-shadow: 0px 20px 80px rgb(0, 0, 0, 0.45);
+    border: none;
 }
 
 
 .movie__img {
     position: relative;
-    transform: scale(1.02);
+    transform: scale(1.07);
     width: 100%;
     height: 100%;
     transition: all 450ms ease;
+    padding: 0 12px;
 }
 
 .movie__wrapper {
     position: relative;
-    border-radius: 4px;
-    box-shadow: 0 20px 80px rgb(0, 0, 0, 0.45);
-    overflow: hidden;
-    border: none;
     z-index: 2;
 }
 
@@ -184,6 +186,8 @@ nav {
     opacity: 0;
     transition: all 600ms ease;
 }
+
+li.movie {}
 
 .movie__title {
     display: flex;
@@ -244,16 +248,21 @@ nav {
 
 @media (max-width: 768px) {
 
+    a.nav__link.btn {
+        margin-right: 12px;
+    }
+
     .nav__link {
         font-size: 24px;
     }
 
     .nav__img--header {
         font-size: 24px;
+        margin-left: 12px;
     }
 
     .search__header {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     .search__container {
@@ -270,7 +279,6 @@ nav {
         width: 70%;
         top: 0;
         left: 0;
-        padding-bottom: 72px;
     }
 
     .movies {
@@ -280,16 +288,51 @@ nav {
     }
 
     .movie__description {
+        max-width: 90%;
         position: absolute;
         margin-left: auto;
         margin-right: auto;
         left: 0;
         right: 0;
-        text-align: center;
     }
+
+    .movie__title {
+        font-size: 24px;
+    }
+
+    .movie__plot,
+    .movie__info,
+    .movie__rating--score,
+    .movie__rating--title {
+        font-size: 20px;
+    }
+
 }
 
+
+/* super small media */
 @media (max-width: 480px) {
-    
+    .search__header {
+        font-size: 28px;
+    }
+
+    .search__input {
+        font-size: 14px;
+    }
+
+    .movie__description {
+        max-width: 95%;
+    }
+
+    .movie__title {
+        font-size: 16px;
+    }
+
+    .movie__plot,
+    .movie__info,
+    .movie__rating--score,
+    .movie__rating--title {
+        font-size: 14px;
+    }
 }
 
