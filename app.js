@@ -7,7 +7,7 @@ const movieListEl = document.querySelector(".movies")
 
 async function onSearchChange(event){
     movieName = event.target.value
-    const movies = await fetch(`https://www.omdbapi.com/?s=${movieName}&page=1&apikey=cfc93c83`);
+    const movies = await fetch(`https://www.omdbapi.com/?s=${movieName}&page=1&type=movie&apikey=cfc93c83`);
     const moviesData = await movies.json();
     console.log(moviesData);
     if(moviesData.Response == "True"){
